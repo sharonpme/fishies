@@ -30,9 +30,9 @@ get_var() {
 	awk -F'=' "/^$2/ { print \$2 }" $1
 }
 
-HOST=$(get_var ../server.conf MQTT_HOST)
-PORT=$(get_var ../server.conf MQTT_PORT)
-USER=$(get_var ../server.conf MQTT_USER)
-PASS=$(get_var ../server.conf MQTT_PASS)
+HOST=$(get_var $SERVER_CONF MQTT_HOST)
+PORT=$(get_var $SERVER_CONF MQTT_PORT)
+USER=$(get_var $SERVER_CONF MQTT_USER)
+PASS=$(get_var $SERVER_CONF MQTT_PASS)
 
 mosquitto_pub --topic $TOPIC -u $USER -P $PASS -h $HOST -p $PORT -m $(cat $1)
