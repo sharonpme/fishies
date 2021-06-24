@@ -1,0 +1,11 @@
+[Unit]
+Description=Runs fishies-timer.service every second
+
+[Timer]
+OnBootSec=1s
+OnUnitActiveSec=1s
+AccuracySec=1us
+Unit=fishies-timer.service
+
+[Install]
+WantedBy=multi-user.target
