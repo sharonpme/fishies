@@ -4,10 +4,10 @@ After=multi-user.target
 
 [Service]
 Environment="VERNEMQ_PATH=/usr/bin/vernemq"
-Type=idle
+Type=simple
 Restart=always
 RestartSec=1
-ExecStart=/bin/bash $VERNEMQ_PATH/bin/run-vernemq.sh
+ExecStart=/usr/bin/vernemq/bin/vernemq console -noshell -noinput $@ &
 
 [Install]
 WantedBy=multi-user.target
