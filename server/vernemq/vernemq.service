@@ -1,0 +1,12 @@
+[Unit]
+Description=The VerneMQ broker.
+After=multi-user.target
+
+[Service]
+Type=idle
+Restart=always
+RestartSec=1
+ExecStart=/bin/bash /usr/local/bin/vernemq/bin/run-vernemq.sh
+
+[Install]
+WantedBy=multi-user.target
