@@ -7,7 +7,7 @@ Environment="VERNEMQ_PATH=/usr/bin/vernemq"
 Type=idle
 Restart=always
 RestartSec=1
-ExecStart=/bin/bash /usr/local/bin/vernemq/bin/run-vernemq.sh
+ExecStart=/bin/bash $VERNEMQ_PATH/bin/run-vernemq.sh
 
 [Install]
 WantedBy=multi-user.target
