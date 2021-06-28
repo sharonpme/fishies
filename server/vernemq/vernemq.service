@@ -3,6 +3,7 @@ Description=The VerneMQ broker.
 After=multi-user.target
 
 [Service]
+Environment="VERNEMQ_PATH=/usr/bin/vernemq"
 Type=idle
 Restart=always
 RestartSec=1
