@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="/static/bootstrap.min.css">
+	<script src="/static/bootstrap.bundle.min.js"></script>
+
+	<link rel="stylesheet" href="/static/jquery-cron.css">
+	<script src="/static/jquery.min.js"></script>
+	<script src="/static/jquery-cron-min.js"></script>
+</head>
+<body>
+	<div class="container">
+		{{if .Error}}
+			<div class="alert alert-danger">
+				{{.Error}}
+			</div>
+		{{end}}
+		<div class="card my-1">
+			<div class="card-body">
+				<form method="post" action="/schedule">
+					<input name="tag" class="form-control my-1" type="text" placeholder="ID">
+					<input id="order-new-schedule" name="schedule" type="hidden">
+					<div id="order-new-cron-input" class="my-1"></div>
+					<button type="submit" class="btn btn-primary my-1">Update</button>
+				</form>
+			</div>
+		</div>
+		<script>
+			$(document).ready(() => {
+				$('#order-new-cron-input').cron({
+					initial: '* * * * *',
+					onChange: function() {
+						$('#order-new-schedule').val($(this).cron('value'));
+					},			
+				});
+			});
+		</script>
+		{{range .Orders}}
+			<div class="card my-1">
+				<div class="card-body">
+					<form method="post" action="/schedule">
+						<input name="tag" class="form-control my-1" type="text" placeholder="ID" value="{{.Tag}}" readonly>
+						<input id="order-{{.Tag}}-schedule" name="schedule" type="hidden">
+						<div id="order-{{.Tag}}-cron-input" class="my-1"></div>
+						<button type="submit" class="btn btn-primary my-1">Update</button>
+						<a href="/schedule/remove/{{.Tag}}" class="btn btn-danger my-1">Remove</a>
+					</form>
+				</div>
+			</div>
+			<script>
+				$(document).ready(() => {
+					$(document.getElementById('order-{{.Tag}}-cron-input')).cron({
+						initial: '{{.Cron}}',
+						onChange: function() {
+							$(document.getElementById('order-{{.Tag}}-schedule')).val($(this).cron('value'));
+						},			
+						useGentleSelect: false,
+					});
+				});
+			</script>
+		{{end}}
+	</div>
+</body>
+</html>
