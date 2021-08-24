@@ -1,4 +1,4 @@
-apt update && apt install -y mosquitto-clients date
+apt update && apt install -y mosquitto-clients
 
 cp fishies-timer.service /etc/systemd/system/fishies-timer.service
 cp fishies-timer.timer /etc/systemd/system/fishies-timer.timer
