@@ -1,0 +1,11 @@
+filebeat.inputs:
+  - type: mqtt
+    hosts:
+      - tcp://127.0.0.1:1883
+      - ssl://127.0.0.1:8883
+    topics:
+      - cfeed
+      - ctime
+
+output.logstash:
+  hosts: [ "127.0.0.1:5044" ]
