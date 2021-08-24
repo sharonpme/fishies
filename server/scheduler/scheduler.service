@@ -7,16 +7,8 @@ After=network.target
 Type=simple
 Restart=on-failure
 RestartSec=10
-startLimitIntervalSec=60
 WorkingDirectory=/etc/fishies
 ExecStart=/etc/fishies/scheduler
-
-ExecStartPre=/bin/mkdir -p /var/log/fishies-scheduler
-ExecStartPre=/bin/chown syslog:adm /var/log/fishies-scheduler
-ExecStartPre=/bin/chmod 755 /var/log/fishies-scheduler
-StandardOutput=syslog
-StandardError=syslog
-SyslogIdentifier=fishies-scheduler
 
 [Install]
 WantedBy=multi-user.target
