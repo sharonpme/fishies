@@ -34,3 +34,4 @@ echo "PATH=\"\$PATH:/usr/bin/vernemq/bin\"" >> /etc/profile
 echo "export PATH" >> /etc/profile
 
 source /etc/profile
+rm -rf $BUILD_DIR
