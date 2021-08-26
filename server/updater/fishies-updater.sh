@@ -35,4 +35,4 @@ PORT=$(get_var $SERVER_CONF MQTT_PORT)
 USER=$(get_var $SERVER_CONF MQTT_USER)
 PASS=$(get_var $SERVER_CONF MQTT_PASS)
 
-mosquitto_pub --topic $TOPIC -u $USER -P $PASS -h $HOST -p $PORT -m $(cat $1)
+mosquitto_pub --topic $TOPIC -u $USER -P $PASS -h $HOST -p $PORT -r -m $(cat $1)

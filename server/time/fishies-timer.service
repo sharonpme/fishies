@@ -4,7 +4,7 @@ After=fishies-vernemq.service
 
 [Service]
 EnvironmentFile=/etc/fishies/server.conf
-ExecStart=/bin/bash -c 'mosquitto_pub --topic "time" -u $MQTT_USER -P $MQTT_PASS -h $MQTT_HOST -p $MQTT_PORT -m $(date +%%s)'
+ExecStart=/bin/bash -c 'mosquitto_pub --topic "time" -u $MQTT_USER -P $MQTT_PASS -h $MQTT_HOST -p $MQTT_PORT -r -m $(date +%%s)'
 
 [Install]
 WantedBy=multi-user.target

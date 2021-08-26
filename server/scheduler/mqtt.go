@@ -34,7 +34,7 @@ func NewMQTT(options MQTTClientOptions) (*MQTTClient, error) {
 }
 
 func (m *MQTTClient) Publish(tag string, feed time.Time) error {
-	token := m.client.Publish(tag, 0, false, fmt.Sprintf("%d", feed.Unix()))
+	token := m.client.Publish(tag, 0, true, fmt.Sprintf("%d", feed.Unix()))
 	if token.Error() != nil {
 		return token.Error()
 	}
