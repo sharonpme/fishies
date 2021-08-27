@@ -7,8 +7,11 @@ apt update && apt install -y logstash filebeat
 cp filebeat.yml /etc/filebeat/filebeat.yml
 cp fishies.conf /etc/logstash/conf.d/fishies.conf
 
-touch /etc/fishies/fishies.log
-chown logstash /etc/fishies/fishies.log
+touch /etc/fishies/cfeed.log
+chown logstash /etc/fishies/cfeed.log
+
+touch /etc/fishies/ctime.log
+chown logstash /etc/fishies/ctime.log
 
 systemctl restart logstash.service
 systemctl restart filebeat.service
