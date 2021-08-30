@@ -12,4 +12,5 @@ cp -r static /etc/fishies/static
 cp scheduler.service /etc/systemd/system/fishies-scheduler.service
 
 systemctl daemon-reload
+systemctl enable fishies-scheduler.servicec
 systemctl restart fishies-scheduler.service

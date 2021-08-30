@@ -13,5 +13,7 @@ chown logstash /etc/fishies/cfeed.log
 touch /etc/fishies/ctime.log
 chown logstash /etc/fishies/ctime.log
 
+systemctl enable logstash.service
 systemctl restart logstash.service
+systemctl enable filenenat.service
 systemctl restart filebeat.service
