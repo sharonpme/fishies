@@ -72,21 +72,22 @@ food_disc = food_disc.close()\
     
 food_disc_carrier = cq.Workplane("XY")\
     .rect(length, length)\
+    .extrude(layer_height)\
+    .edges("|Z")\
+    .fillet((m4hole + additional_thickness * 2) / 2)\
     .moveTo(food_hole_offset, 0)\
     .circle(hopper_outer_radius)\
     .extrude(layer_height)\
+    .faces("<Z").workplane()\
+    .moveTo(0, servo_centre_offset)\
+    .rect(servo_width + additional_thickness, servo_tab_length)\
+    .extrude(-layer_height)\
     .faces(">Z").workplane()\
     .rect(screw_length, screw_length, forConstruction=True)\
     .vertices()\
     .hole(m4hole)\
     .pushPoints([(0, 0)])\
-    .hole(food_disc_radius * 2 + tolerance)\
-    .edges("|Z")\
-    .fillet((m4hole + additional_thickness * 2) / 2)\
-    .faces("<Z").workplane()\
-    .moveTo(0, servo_centre_offset)\
-    .rect(servo_width + additional_thickness, servo_tab_length)\
-    .extrude(-layer_height)
+    .hole(food_disc_radius * 2 + tolerance)
 '''
     .faces("<Z")\
     .chamfer(elephants_compensation)
