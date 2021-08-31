@@ -7,4 +7,5 @@ mkdir -p /etc/fishies
 cp ../server.conf /etc/fishies/server.conf
 
 systemctl daemon-reload
+systemctl enable fishies-timer.timer
 systemctl restart fishies-timer.timer
