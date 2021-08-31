@@ -6,10 +6,10 @@ food_hole_radius = 5 / 2
 
 layer_height = 2
 additional_thickness = 2
-tolerance = 0.4
+tolerance = 0.8
 elephants_compensation = 0.4
 
-m4hole = 4.2 + tolerance
+m4hole = 4 + tolerance
 
 length = food_disc_radius * 2 + additional_thickness * 4
 screw_length = length - m4hole - additional_thickness * 2
@@ -78,10 +78,10 @@ food_disc_carrier = cq.Workplane("XY")\
     .moveTo(food_hole_offset, 0)\
     .circle(hopper_outer_radius)\
     .extrude(layer_height)\
-    .faces("<Z").workplane()\
+    .faces("<Z").workplane(invert=True)\
     .moveTo(0, servo_centre_offset)\
     .rect(servo_width + additional_thickness, servo_tab_length)\
-    .extrude(-layer_height)\
+    .extrude(layer_height)\
     .faces(">Z").workplane()\
     .rect(screw_length, screw_length, forConstruction=True)\
     .vertices()\
