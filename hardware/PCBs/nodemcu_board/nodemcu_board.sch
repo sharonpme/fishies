@@ -19,7 +19,7 @@ U 1 1 6125A1DB
 P 3700 4000
 F 0 "J1" H 3757 4467 50  0000 C CNN
 F 1 "USB" H 3757 4376 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 3850 3950 50  0001 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 3850 3950 50  0001 C CNN
 F 3 "~" H 3850 3950 50  0001 C CNN
 	1    3700 4000
 	1    0    0    -1  
@@ -101,7 +101,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 3200 5550 3200
 $Comp
-L RF_Module:NodeMCUV3 U1
+L nodemcu_board-rescue:NodeMCUV3-RF_Module U1
 U 1 1 61297303
 P 5700 4200
 F 0 "U1" H 5675 5306 50  0000 C CNN
@@ -129,4 +129,10 @@ Wire Wire Line
 Connection ~ 5700 5000
 Wire Wire Line
 	5700 5000 6500 5000
+Wire Wire Line
+	5400 3850 5900 3850
+Wire Wire Line
+	5900 3850 5900 3800
+Wire Wire Line
+	5900 3800 6000 3800
 $EndSCHEMATC

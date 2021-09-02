@@ -121,11 +121,11 @@ X ~ 2 0 -100 40 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# RF_Module_NodeMCUV3
+# nodemcu_board-rescue_NodeMCUV3-RF_Module
 #
-DEF RF_Module_NodeMCUV3 U 0 40 Y Y 1 F N
+DEF nodemcu_board-rescue_NodeMCUV3-RF_Module U 0 40 Y Y 1 F N
 F0 "U" 350 0 50 H V C CNN
-F1 "RF_Module_NodeMCUV3" 0 0 50 H V C CNN
+F1 "nodemcu_board-rescue_NodeMCUV3-RF_Module" 0 0 50 H V C CNN
 F2 "" 350 0 50 H I C CNN
 F3 "" 350 0 50 H I C CNN
 DRAW
