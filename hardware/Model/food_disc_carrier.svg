@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg2181"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="food_disc_carrier.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2183"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-object-midpoints="true"
+     inkscape:zoom="2.7865881"
+     inkscape:cx="390.97992"
+     inkscape:cy="570.94911"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2178" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.0495147"
+       id="path846"
+       cx="88.044754"
+       cy="137.22827"
+       r="2.0752428" />
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.0495147"
+       id="path846-9"
+       cx="117.04475"
+       cy="137.22827"
+       r="2.0752428" />
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.0495147"
+       id="path846-5"
+       cx="88.044754"
+       cy="166.22827"
+       r="2.0752428" />
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.0495147"
+       id="path846-9-3"
+       cx="117.04475"
+       cy="166.22827"
+       r="2.0752428" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.424781"
+       id="rect1528"
+       width="37.575222"
+       height="37.575218"
+       x="83.757149"
+       y="132.94066" />
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.491228"
+       id="path2428"
+       cx="102.54475"
+       cy="151.72827"
+       rx="15.254385"
+       ry="15.254386" />
+  </g>
+</svg>
