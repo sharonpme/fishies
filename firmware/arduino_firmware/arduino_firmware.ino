@@ -1,10 +1,15 @@
+
 #include <MQTT.h>
 #include <ESP8266mDNS.h>
 #include <ESP8266WiFi.h>
 #include <Servo.h>
 
-#define WIFI_NAME "Pomacea"
-#define WIFI_PASSWORD "bridgesii"
+extern "C" {
+#include "user_interface.h" // this is for the RTC memory read/write functions
+}
+
+#define WIFI_NAME "Samarinda"
+#define WIFI_PASSWORD "whatisyourname"
 
 #define MASTER_TOPIC "orders/all"
 #define SPECIFIC_TOPIC "orders/feeder"
